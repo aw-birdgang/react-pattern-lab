@@ -1,0 +1,630 @@
+/* App Layout */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.App-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.App-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.App-main {
+  flex: 1;
+  padding: 0 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.App-footer {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+  margin-top: auto;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.tab-button {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: left;
+}
+
+.tab-button:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.tab-button.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.tab-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tab-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Example Navigation */
+.example-navigation {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.example-navigation h3 {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.example-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.example-button {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.example-button:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.example-button.active {
+  border-color: #667eea;
+  background: #667eea;
+  color: white;
+}
+
+/* Content Area */
+.content-area {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+/* Example Containers */
+.example-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.example-container h2 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.example-container p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.controls {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.controls input[type="number"],
+.controls select {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.controls input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.component-container {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+/* Warning and Info Boxes */
+.warning-box,
+.info-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.info-box {
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.warning-box h4,
+.info-box h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.warning-box ul,
+.info-box ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.warning-box li,
+.info-box li {
+  margin-bottom: 0.5rem;
+}
+
+/* Error Boundary Styles */
+.error-boundary {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 2rem;
+  color: #721c24;
+  text-align: center;
+}
+
+.error-content h2 {
+  margin: 0 0 1rem 0;
+  color: #721c24;
+}
+
+.error-details {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.error-details pre {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.retry-button,
+.reset-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.retry-button {
+  background: #28a745;
+  color: white;
+}
+
+.retry-button:hover {
+  background: #218838;
+}
+
+.reset-button {
+  background: #dc3545;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #c82333;
+}
+
+/* Custom Fallback */
+.custom-fallback {
+  background: #e2e3e5;
+  border: 1px solid #d6d8db;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #383d41;
+}
+
+.custom-fallback h3,
+.custom-fallback h4 {
+  margin: 0 0 1rem 0;
+  color: #383d41;
+}
+
+.custom-fallback button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.custom-fallback button:hover {
+  background: #0056b3;
+}
+
+/* Component Styles */
+.buggy-counter,
+.buggy-renderer,
+.user-profile {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.buggy-counter h3,
+.buggy-renderer h3,
+.user-profile h3 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+}
+
+.warning {
+  color: #856404;
+  background: #fff3cd;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.counter-actions,
+.renderer-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.counter-actions button,
+.renderer-actions button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.counter-actions button:hover,
+.renderer-actions button:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #495057;
+}
+
+.user-info p {
+  margin: 0;
+  color: #6c757d;
+}
+
+.refresh-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.refresh-button:hover {
+  background: #0056b3;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.error-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.error-button:hover {
+  background: #c82333;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Advanced Example Styles */
+.advanced-example {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.error-stats {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.error-stats h3 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+}
+
+.error-stats p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.clear-logs-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.clear-logs-btn:hover {
+  background: #5a6268;
+}
+
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.component-section {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.component-section h3 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  text-align: center;
+}
+
+.error-logs {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.error-logs h3 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+}
+
+.logs-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.error-log-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.component-name {
+  font-weight: 600;
+  color: #dc3545;
+}
+
+.timestamp {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.error-message {
+  color: #721c24;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.stack-trace {
+  margin-top: 0.5rem;
+}
+
+.stack-trace summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #495057;
+}
+
+.stack-trace pre {
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.pattern-explanation {
+  background: #e2e3e5;
+  border: 1px solid #d6d8db;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pattern-explanation h3 {
+  margin: 0 0 1rem 0;
+  color: #383d41;
+}
+
+.pattern-explanation ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.pattern-explanation li {
+  margin-bottom: 0.5rem;
+  color: #383d41;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .tab-navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-button {
+    min-width: 250px;
+  }
+  
+  .example-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .components-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
