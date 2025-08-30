@@ -1,0 +1,767 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.App-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.App-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.App-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.App-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pattern-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pattern-btn {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.pattern-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.pattern-btn.active {
+  background: rgba(76, 175, 80, 0.3);
+  border-color: #4CAF50;
+}
+
+.example-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.example-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.example-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.App-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.welcome {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.pattern-info {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.pattern-info h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.pattern-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pattern-info li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pattern-info li:last-child {
+  border-bottom: none;
+}
+
+/* Example Container Styles */
+.example-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.example-container h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.example-container > p {
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.example-section {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/* Counter Styles */
+.counter {
+  text-align: center;
+}
+
+.counter h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.counter-display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.counter-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.counter-controls button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.counter-controls button:hover {
+  background: #45a049;
+}
+
+.counter-info {
+  text-align: left;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.counter-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Form Styles */
+.form {
+  text-align: left;
+}
+
+.form h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #f44336;
+}
+
+.error-text {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background: #45a049;
+}
+
+.form-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.form-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* API Example Styles */
+.api-example {
+  text-align: left;
+}
+
+.api-controls {
+  margin-bottom: 1rem;
+}
+
+.api-controls button {
+  padding: 0.75rem 1.5rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.api-controls button:hover:not(:disabled) {
+  background: #1976D2;
+}
+
+.api-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  font-style: italic;
+}
+
+.error {
+  background: rgba(244, 67, 54, 0.2);
+  border: 1px solid #f44336;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.error h4 {
+  margin: 0 0 0.5rem 0;
+  color: #f44336;
+}
+
+.users-list {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.users-list h4 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.users-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.users-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.users-list li:last-child {
+  border-bottom: none;
+}
+
+/* LocalStorage Example Styles */
+.localStorage-example {
+  text-align: left;
+}
+
+.theme-section,
+.preferences-section {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.theme-section h4,
+.preferences-section h4 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.theme-section button {
+  padding: 0.75rem 1.5rem;
+  background: #9C27B0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.theme-section button:hover {
+  background: #7B1FA2;
+}
+
+.preference-item {
+  margin-bottom: 1rem;
+}
+
+.preference-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.preference-item select,
+.preference-item input[type="checkbox"] {
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.current-preferences {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.current-preferences h5 {
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.current-preferences pre {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  color: #4CAF50;
+  font-size: 0.9rem;
+}
+
+/* WindowSize Example Styles */
+.windowSize-example {
+  text-align: left;
+}
+
+.size-display,
+.device-type,
+.responsive-content {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.size-display h4,
+.device-type h4,
+.responsive-content h4 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.size-info p {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.device-indicators {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.device-indicator {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.device-indicator.active {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  transform: scale(1.05);
+}
+
+.content-box {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.content-box.mobile {
+  border-color: #2196F3;
+  background: rgba(33, 150, 243, 0.1);
+}
+
+.content-box.tablet {
+  border-color: #FF9800;
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.content-box.desktop {
+  border-color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.content-box h5 {
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.content-box p {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.content-box button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.content-box button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tablet-actions,
+.desktop-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Code Comparison Styles */
+.code-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.code-section {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.code-section h4 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.code-section pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+
+
+.pattern-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pattern-info h3 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.pattern-info p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.pattern-info h4 {
+  margin: 1.5rem 0 1rem 0;
+  color: #fff;
+}
+
+.pattern-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pattern-info li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1.5;
+}
+
+.pattern-info li:last-child {
+  border-bottom: none;
+}
+
+.pattern-info strong {
+  color: #4CAF50;
+}
+
+/* Comparison Info Styles */
+.comparison-info {
+  margin-top: 2rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.comparison-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.comparison-item h4 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.comparison-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-item li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Before App Navigation Styles */
+.App-nav button {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.App-nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.App-nav button.active {
+  background: rgba(244, 67, 54, 0.3);
+  border-color: #f44336;
+}
+
+/* Info Styles for Before Components */
+.counter-info,
+.form-info,
+.api-info,
+.localStorage-info,
+.windowSize-info {
+  text-align: left;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  border-radius: 5px;
+}
+
+.counter-info p,
+.form-info p,
+.api-info p,
+.localStorage-info p,
+.windowSize-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ffcdd2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .code-comparison {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .App-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pattern-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pattern-btn {
+    width: 250px;
+    margin: 0.25rem 0;
+  }
+  
+  .example-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .example-nav a {
+    width: 200px;
+    margin: 0.25rem 0;
+  }
+  
+  .device-indicators {
+    flex-direction: column;
+  }
+  
+  .tablet-actions,
+  .desktop-actions {
+    flex-direction: column;
+  }
+}
