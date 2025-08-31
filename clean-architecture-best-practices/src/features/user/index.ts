@@ -14,3 +14,4 @@ export * from './infrastructure/HttpUserRepository';
 // Presentation
 export * from './presentation/hooks/useUser';
 export * from './presentation/pages/UserProfilePage';
+export * from './presentation/pages/UsersPage';

@@ -12,3 +12,4 @@ export * from './infrastructure/HttpPostRepository';
 
 // Presentation
 export * from './presentation/hooks/usePosts';
+export * from './presentation/pages/PostsPage';
